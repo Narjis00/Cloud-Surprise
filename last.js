@@ -5,7 +5,7 @@ const letter = document.getElementById("letter");
 const letterText = document.getElementById("letterText");
 
 const smallEnding = document.getElementById("smallEnding");
-
+const music = document.getElementById("bgMusic");
 
 // --------------------
 // LETTER CONTENT
@@ -26,14 +26,20 @@ Forever and infinitely ever Num num .
 
 <span class="signature">~ Your wifey 🤍</span>`;
 
-
 // --------------------
 // OPEN LETTER
 // --------------------
 
-envelope.addEventListener("click",()=>{
+envelope.addEventListener("click", () => {
 
     envelopeContainer.style.display = "none";
+
+    // Start the music
+    music.volume = 0.3;
+
+    music.play().catch(err => {
+        console.error("Music error:", err);
+    });
 
     letter.classList.remove("hidden");
 
@@ -41,24 +47,24 @@ envelope.addEventListener("click",()=>{
     letterText.innerHTML = message;
 
     // Show the little note underneath
-   setTimeout(()=>{
+    setTimeout(() => {
 
-    smallEnding.classList.remove("hidden");
+        smallEnding.classList.remove("hidden");
 
-    const ps = document.getElementById("psMessage");
+        const ps = document.getElementById("psMessage");
 
-    setTimeout(()=>{
+        setTimeout(() => {
 
-        ps.innerHTML =
-        "P.S : Can't wait to make countless more memories with you 🤍";
+            ps.innerHTML =
+            "P.S : Can't wait to make countless more memories with you 🤍";
 
-        ps.classList.add("show");
+            ps.classList.add("show");
 
-    },2500);
+        }, 2500);
 
-},500);
+    }, 500);
+
 });
-
 
 // --------------------
 // FLOATING CLOUDS
@@ -74,28 +80,28 @@ const floating = [
 
 ];
 
-setInterval(()=>{
+setInterval(() => {
 
     const item = document.createElement("div");
 
     item.className = "cloud";
 
-    item.innerHTML = floating[Math.floor(Math.random()*floating.length)];
+    item.innerHTML = floating[Math.floor(Math.random() * floating.length)];
 
-    item.style.left = Math.random()*100 + "vw";
+    item.style.left = Math.random() * 100 + "vw";
 
-    item.style.fontSize = (24 + Math.random()*28) + "px";
+    item.style.fontSize = (24 + Math.random() * 28) + "px";
 
-    item.style.animationDuration = (8 + Math.random()*6) + "s";
+    item.style.animationDuration = (8 + Math.random() * 6) + "s";
 
     item.style.opacity = .8;
 
     document.body.appendChild(item);
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         item.remove();
 
-    },15000);
+    }, 15000);
 
-},700);
+}, 700);
