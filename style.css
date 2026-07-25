@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    overflow:hidden;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* Background */
+
+.spiral{
+
+    position:absolute;
+    inset:0;
+
+    background:url("images/spiral.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    filter:brightness(.42);
+
+    animation:spiralAppear 2s ease forwards;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(40,40,40,.05),
+    rgba(15,15,15,.18));
+
+}
+
+/* Content */
+
+.container{
+
+    position:relative;
+    z-index:10;
+
+    width:85%;
+    max-width:900px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    transform:translateY(60px);
+
+}
+
+/* Intro */
+
+.intro{
+
+    color:#d6d6d6;
+
+    font-size:17px;
+
+    letter-spacing:3px;
+
+    margin-bottom:35px;
+
+    font-weight:300;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+    animation-delay:.5s;
+
+}
+
+/* Title */
+
+h1{
+
+    color:white;
+
+    font-size:50px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    max-width:760px;
+
+    text-shadow:0 0 10px rgba(0,0,0,.45);
+
+    opacity:0;
+
+    animation:fadeUp 1.2s forwards;
+
+    animation-delay:1.3s;
+
+}
+
+/* First sentence */
+
+.line1{
+
+    margin-top:18px;
+
+    color:#dddddd;
+
+    font-size:22px;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+    animation-delay:2.3s;
+
+}
+
+/* Second sentence */
+
+.line2{
+
+    margin-top:5px;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+    animation-delay:3.2s;
+
+}
+
+/* Heart */
+
+.heart{
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+    color:#c084fc;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+    animation-delay:3.8s;
+
+}
+
+/* Button */
+
+button{
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#8B5CF6;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    opacity:0;
+
+    animation:fadeUp 1s forwards;
+
+    animation-delay:4.4s;
+
+}
+
+button:hover{
+
+    background:#A855F7;
+
+    transform:scale(1.06);
+
+}
+
+/* Animations */
+
+@keyframes spiralAppear{
+
+    from{
+
+        opacity:0;
+        transform:scale(1.05);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}

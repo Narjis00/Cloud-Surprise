@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#111111;
+
+    color:white;
+
+    overflow:hidden;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+#winnerScreen,
+#scratchScreen,
+#endScreen{
+
+    width:90%;
+    max-width:800px;
+
+    text-align:center;
+
+    animation:fade .8s ease;
+
+}
+
+.topTitle{
+
+    color:#B68CFF;
+
+    letter-spacing:3px;
+
+    margin-bottom:35px;
+
+    font-weight:400;
+
+}
+
+#winnerName{
+
+    font-size:58px;
+
+    margin-bottom:18px;
+
+}
+
+#winnerText{
+
+    font-size:22px;
+
+    color:#d0d0d0;
+
+    margin-bottom:45px;
+
+}
+
+button{
+
+    padding:17px 42px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#8B5CF6;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    background:#A855F7;
+
+    transform:scale(1.05);
+
+}
+
+h2{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+.small{
+
+    color:#bbbbbb;
+
+    margin-bottom:35px;
+
+}
+
+.scratchContainer{
+
+    position:relative;
+
+    width:420px;
+
+    height:220px;
+
+    margin:auto;
+
+}
+
+#prize{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#191919;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:3px solid #8B5CF6;
+
+    box-shadow:0 0 35px rgba(139,92,246,.4);
+
+}
+
+.heart{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+#prize h1{
+
+    font-size:46px;
+
+    color:#B68CFF;
+
+}
+
+#prize p{
+
+    margin-top:12px;
+
+    color:#ddd;
+
+    font-size:22px;
+
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    cursor:crosshair;
+
+}
+
+.progressBar{
+
+    width:420px;
+
+    height:16px;
+
+    background:#2a2a2a;
+
+    border-radius:999px;
+
+    margin:35px auto;
+
+    overflow:hidden;
+
+}
+
+#progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:#8B5CF6;
+
+    transition:.3s;
+
+}
+
+#loadingText{
+
+    font-size:22px;
+
+    margin-top:30px;
+
+}
+
+#ownerText{
+
+    font-size:26px;
+
+    margin:35px 0;
+
+    color:#B68CFF;
+
+}
+
+#continueBtn{
+
+    display:none;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}

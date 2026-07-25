@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Prize 💜</title>
+
+    <link rel="stylesheet" href="prize.css">
+
+</head>
+
+<body>
+
+    <!-- WINNER SCREEN -->
+
+    <div id="winnerScreen">
+
+        <h3 class="topTitle">🎉 WINNER ANNOUNCED 🎉</h3>
+
+        <h1 id="winnerName"></h1>
+
+        <p id="winnerText"></p>
+
+        <button id="claimBtn">Claim Prize 🎁</button>
+
+    </div>
+
+
+
+    <!-- SCRATCH SCREEN -->
+
+    <div id="scratchScreen" class="hidden">
+
+        <h2>Scratch here 👇</h2>
+
+        <p class="small">Your prize is hiding underneath.</p>
+
+        <div class="scratchContainer">
+
+            <!-- Hidden prize -->
+
+            <div id="prize">
+
+                <div class="heart">❤️</div>
+
+                <h1>MY HEART</h1>
+
+                <p>:)</p>
+
+            </div>
+
+            <!-- Scratch Canvas -->
+
+            <canvas id="scratchCanvas" width="420" height="220"></canvas>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- END SCREEN -->
+
+    <div id="endScreen" class="hidden">
+
+        <h1>Prize claimed successfully. ✓</h1>
+
+        <p id="loadingText">Transferring ownership...</p>
+
+        <div class="progressBar">
+
+            <div id="progress"></div>
+
+        </div>
+
+        <p id="ownerText"></p>
+
+        <a href="alternate.html">
+
+            <button id="continueBtn">Continue →</button>
+
+        </a>
+
+    </div>
+
+<script src="prize.js"></script>
+
+</body>
+
+</html>

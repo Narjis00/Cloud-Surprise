@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111111;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:700px;
+
+    text-align:center;
+
+    transition:.8s;
+
+}
+
+.small{
+
+    color:#bdbdbd;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+#title{
+
+    font-size:54px;
+
+    margin-bottom:15px;
+
+}
+
+#subtitle{
+
+    color:#9f9f9f;
+
+    font-size:20px;
+
+    margin-bottom:50px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    position:relative;
+
+    height:90px;
+
+}
+
+button{
+
+    padding:16px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#yesBtn{
+
+    background:#8B5CF6;
+
+    color:white;
+
+}
+
+#yesBtn:hover{
+
+    transform:scale(1.06);
+
+    background:#A855F7;
+
+}
+
+#noBtn{
+
+    background:#2a2a2a;
+
+    color:white;
+
+    position:absolute;
+
+    left:55%;
+
+}
+
+#noBtn:hover{
+
+    background:#3a3a3a;
+
+}
+
+/* Second screen */
+
+#resultScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    background:#111111;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.8s;
+
+}
+
+#resultScreen.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+#resultTitle{
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+}
+
+#resultText{
+
+    font-size:24px;
+
+    color:#d8d8d8;
+
+    margin-bottom:45px;
+
+}
+
+#continueBtn{
+
+    background:#8B5CF6;
+
+    color:white;
+
+}
+
+#continueBtn:hover{
+
+    background:#A855F7;
+
+    transform:scale(1.05);
+
+}
+
+.fadeOut{
+
+    opacity:0;
+
+    transform:scale(.96);
+
+}
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}

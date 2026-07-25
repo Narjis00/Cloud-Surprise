@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+
+    background:#090611;
+
+    overflow:hidden;
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.container{
+
+    width:100%;
+
+    text-align:center;
+
+    position:relative;
+
+    padding:40px;
+
+}
+
+
+/* ------------------ */
+/* ENVELOPE */
+/* ------------------ */
+
+#envelopeContainer{
+
+    animation:drop 1.8s ease;
+
+}
+
+#envelope{
+
+    font-size:130px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    user-select:none;
+
+}
+
+#envelope:hover{
+
+    transform:scale(1.08) rotate(-4deg);
+
+}
+
+.clickText{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    color:#d9d9d9;
+
+}
+
+
+/* ------------------ */
+/* LETTER */
+/* ------------------ */
+.paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:1.5px dashed rgba(192,132,252,.6);
+
+    border-radius:16px;
+
+    pointer-events:none;
+
+}
+.paper{
+
+    width:580px;
+
+    max-width:88%;
+
+    margin:auto;
+
+    background:#ead8ff;
+
+    color:#2d2542;
+
+    padding:24px 30px;
+
+    border-radius:22px;
+
+    font-size:15px;
+
+    line-height:1.28;
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.5),
+        0 0 25px rgba(192,132,252,.45),
+        0 18px 45px rgba(0,0,0,.35);
+
+    border:2px solid rgba(255,255,255,.45);
+
+    position:relative;
+
+    animation:openLetter .8s ease;
+
+}
+.paper::after{
+
+    content:"🤍";
+
+    position:absolute;
+
+    top:14px;
+
+    right:18px;
+
+    font-size:18px;
+
+    opacity:.75;
+
+}
+
+#letterText{
+
+    white-space:pre-line;
+
+    text-align:left;
+
+    font-size:15px;
+
+    line-height:1.28;
+
+}
+/* ------------------ */
+/* SMALL MESSAGE */
+/* ------------------ */
+#smallEnding p{
+
+    font-size:14px;
+
+    color:#e7e7e7;
+
+    line-height:1.45;
+
+    font-style:italic;
+
+}
+
+#smallEnding p{
+
+    font-size:17px;
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
+}
+
+
+/* ------------------ */
+/* FLOATING CLOUDS */
+/* ------------------ */
+
+.cloud{
+
+    position:fixed;
+
+    bottom:-60px;
+
+    pointer-events:none;
+
+    animation:float linear forwards;
+
+    opacity:.9;
+
+}
+
+
+/* ------------------ */
+/* HIDDEN */
+/* ------------------ */
+
+.hidden{
+
+    display:none;
+
+}
+.signature{
+
+    display:block;
+
+    margin-top:18px;
+
+    text-align:right;
+
+    font-family:"Brush Script MT",cursive;
+
+    font-size:24px;
+
+    color:#8b5cf6;
+
+}
+.note{
+
+    margin-top:18px;
+
+    font-size:13px;
+
+    color:#ececec;
+
+    font-style:italic;
+
+    line-height:1.4;
+
+}
+#psMessage{
+
+    opacity:0;
+
+    margin-top:18px;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-style:italic;
+
+    transition:opacity 1.5s ease;
+
+}
+
+#psMessage.show{
+
+    opacity:1;
+
+}
+.made-footer{
+
+    position:fixed;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:14px;
+
+    color:rgba(255,255,255,.45);
+
+    letter-spacing:1px;
+
+    user-select:none;
+
+}
+
+
+/* ------------------ */
+/* ANIMATIONS */
+/* ------------------ */
+
+@keyframes drop{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-180px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes openLetter{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ------------------ */
+/* MOBILE */
+/* ------------------ */
+
+@media(max-width:700px){
+
+    #envelope{
+
+        font-size:90px;
+
+    }
+
+    .paper{
+
+        padding:28px;
+
+        font-size:18px;
+
+    }
+
+}
