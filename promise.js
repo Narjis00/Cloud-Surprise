@@ -1,6 +1,7 @@
 const intro = document.getElementById("intro");
 const story = document.getElementById("story");
 const line = document.getElementById("line");
+const funnySticker = document.getElementById("funnySticker");
 
 const ending = document.getElementById("ending");
 const endingText = document.getElementById("endingText");
@@ -74,9 +75,24 @@ yesBtn.addEventListener("click",()=>{
         line.style.opacity = "0";
 
         setTimeout(()=>{
+line.innerHTML = storyLines[index];
+line.style.opacity = "1";
 
-            line.innerHTML = storyLines[index];
-            line.style.opacity = "1";
+// Hide sticker by default
+funnySticker.classList.remove("show");
+funnySticker.classList.add("hidden");
+
+// Show it after the joke
+if(storyLines[index] === "Fine. I'll stop. 😔"){
+
+    setTimeout(()=>{
+
+        funnySticker.classList.remove("hidden");
+        funnySticker.classList.add("show");
+
+    },400);
+
+}
 
             // Remove previous button
             const oldBtn = document.getElementById("storyNextBtn");
