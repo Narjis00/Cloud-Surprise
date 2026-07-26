@@ -206,7 +206,29 @@ button:hover{
     background:#b16df6;
 
 }
+#funnySticker{
 
+    width:190px;
+
+    display:block;
+
+    margin:25px auto 0;
+
+    opacity:0;
+
+    transform:scale(.4);
+
+    transition:.45s;
+
+}
+
+#funnySticker.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
 /* Animations */
 
 @keyframes fade{
